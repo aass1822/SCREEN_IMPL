@@ -1,100 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+
+        *{
+            font-size:0.9rem;
+            box-sizing:border-box;
+        }
+        a{
+            text-decoration:none;
+            color: black;
+
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        .btn{
+            border: 1px solid gray;
+            min-width: 80px;
+            height: 100%;
+            line-height: 35px;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
+        form{
+            width: 380px;
+            border: 1 solid;
+            margin:50px auto;
+        }
+        form>.row{
+            margin: 10px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap:5px;
+            height: 35px;
+        }
+        form>.row>label{
+            display: block;
+            min-width: 85px;
+            height: 100%;
+            line-height: 35px;
+        }
+
+    </style>
+
 </head>
 <body>
 
-    <form action="/test.jsp" method="post" ></form>
+    <form action="/test.jsp" method="post" >
 
-     <div>
+    <div class="row">
+        <h2>회원가입</h2>
+    </div>
+     <div class="row">
         <label>이름</label>
         <input name="username" type="text">
     </div>
 
-    <div>
+    <div class="row">
         <label>ID</label>
-        <input name="username" type="text">
-        <a href="javascript:void(0)" id="userid">중복확인</a>
+        <input name="userid" type="text">
+        <a class="btn" href="javascript:void(0)">중복확인</a>
     </div>
 
-    <div>
+    <div class="row">
         <label>PW</label>
-        <input name="password" type="text">
+        <input name="password" type="password">
     </div>
 
-    <div>
+    <div class="row">
         <label>PW확인</label>
-        <input name="password" type="text">
+        <input name="re-password" type="password">
     </div>
 
-    <div>
+    <div class="row">
         <label>연락처</label>
         <select>
             <option value="" selected>010</section></option>
             <option value="">011</section></option>
             <option value="">017</section></option>
         </select>
-        <input name="phone number" type="text">
-        <input name="phone number" type="text">
+        <input name="" type="text">
+        <input name="" type="text">
     </div>
 
-    <div>
+    <div class="row">
         <label>우편번호</label>
-        <input name="addr1" type="text">
-        <a href="javascript:void(0)">검색</a>
-            <div>
+        <input name="zipcode" type="text">
+        <a class="btn" href="javascript:void(0)">검색</a>
+    </div>
+
+    <div class="row">
                 <label>상세주소</label>
                 <input name="addr2" type="text">
-            </div>
     </div>
 
-    <div>
+    <div class="row">
         <label>이메일</label>
-        <input>
-        <select name="email">
+        <input type="text">
+        <select>
             <option selected>@naver.com</option>
             <option>@google.com</option>
             <option>@deum.net</option>
         </select>
     </div>
 
-    <div>
+    <div class="row">
         <label>생년월일</label>
         <input name="birth" type="radio"> 양력
         <input name="birth" type="radio"> 음력
     </div>
 
-    <div>
-        <select name="Y">
+    <div class="row">
+        <select>
             <option selected>2025</option>
             <option>2024</option>
             <option>2023</option>
         </select>
-        <select name="M">
+        <select>
             <option selected>01</option>
             <option>02</option>
             <option>03</option>
         </select>
-        <select name="D">
+        <select>
             <option selected>01</option>
             <option>16</option>
             <option>17</option>
         </select>
     </div>
 
-    <div>
+    <div class="row">
         <input id="email-re" type="checkbox">
         <label for="email-re">이메일 수신에 동의합니다.</label>
+    </div>
+
+    <div class="row">
         <input id="sms-rc" type="checkbox"> 
         <label for="sms-rc">SMS 수신 동의합니다.</label>
     </div>
 
-    <div>
+    <div class="row">
         <input type="summit" value="회원가입">
     </div>
+
+    </form>
 
 </body>
 </html>
