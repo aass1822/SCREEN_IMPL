@@ -1,0 +1,40 @@
+scr: 이미지경로 alt: 이미지가 문제 생겼을 시 대체
+이미지 막 넣으면 크기가 큼
+이미지파일에 우클릭 -> 속성 크기확인
+a태그 안에 img태그 넣어서 버튼 만들고 사이트 이동 가능
+< div style="width: 250px; height: 250px; border: 2px solid;">   <!-- scr: 이미지경로 alt: 이미지가 문제 생겼을 시 대체-->
+        <a href="https://naver.com" target="_blank">
+        <!-- <img src="./10cat.jpg" alt="고양이 사진" /> -->
+        <img style="width: 100%;height: 100%;" src="https://cdn.pixabay.com/photo/2019/11/08/11/56/kitten-4611189_1280.jpg" alt="고양이 사진">
+        </a>
+    </div > - 이게 그 코드임(버튼 사이즈 만들고 사이즈안에 이미지 꽉 채우는 코드
+비디오 삽입방법
+source src="./11Vidio01.mp4" type="vidio/mp4"
+src 주소지정	type mine코드 
+controls: 추가하니 화면뜸,autoplay: 자동재생
+muted: 무음변경,loop: 끝나면 처음으로 반복재생
+obhect-fit:cover : 화면 줄거나 커지면 같이 규격 
+/에서 ?앞까지가 앤드포인트 ?뒤쪽ex:si 매개변수
+
+form : 사용자로부터 득정정보를 받아 서버로 전달하는데 사용되는 태그
+action Attribute : 전달받는 서버 URI
+method Attribute : 서버로 요청하는 방식
+        - GET        : 사용자 요청 정보를 query string으로 전달(Default)(노출됌)
+       - POST       : 사용자 요청 정보를 Request body(Payload)(노출안됌)
+        - PUT        : 
+      - PATCH      : 
+       - DELETE     : 
+1rem 1배수 (16픽셀)
+class : 그룹지정
+id : 특별한 위치를 구별할 때 씀
+name : 서버로 전달할 때 이름 지정
+# 부트스트랩5
+> cdm
+
+
+
+
+
+
+
+

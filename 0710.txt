@@ -1,0 +1,34 @@
+# 2025/07/10
+부트스트랩 자바스크립트
+> 그리드: 격자형태 클래스는 row를 붙히고, 안의 클래스에 col
+마진과 패딩 단축키 : m 마진, mt 마진상단, mb 마진하단, ms 마진 왼쪽, me 마진 오른쪽
+
+------
+# style teg
+
+# 정규표현식
+> pattern="[]{}"
+placeholder: 설명란 
+required: 필수입력사항 비어있을 시 유효성 체크
+disablde :(서버전송 대상에서 제외, 입력불가)
+readonly :(서버전송 대상에 포함, 입력불가)
+pattern[0부터9까지 받겠다]{자리수} 
+oninvalid="this.setCistomValidity('')": 띄울 메시지 직접 입력
+?=. 전방탐색
+*[a-z],*[A-Z],*[\d]: 숫자
+# 자바스크립트
+document: 문서 정보가 들어가있는 오브젝트
+
+# CSS
+> 스타일 탭안에 스타일을 지정하고 css link하면 순서대로 적용되며 마지막껄로 적용됌
+important: 우선순위(강제 적용)
+width : auto(기본값 : 최대너비를 가지려는 성질)
+height : auto(기본값 : 최소높이를 가지려는 성질)
+max-width   :   최대너비 
+min-width   :   최소너비
+max-height  :   최대높이
+min-height  :   최소높이
+----
+
+
+
