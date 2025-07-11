@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        input[type="checkbox"]{
+            width: 150px;
+            height: 150px;
+            background-color: orange;
+            display: none; /* 안보이게 변경 */
+        }
+        input[type="checkbox"]+label{
+            display: inline-block;
+            width: 82px;
+            height: 85px;
+            border-radius:50%;
+            border: 1px solid;
+            background-color: lightgray;
+            background-image: url(./icon_off.svg);
+            background-repeat: no-repeat; /* 사진이 계속 반복되지 않게 설정 */
+            background-position: center;
+            background-size: 80px;
+        }
+        input[type="checkbox"]:checked+label{ /* checked 체크가 됐을 때 */
+            background-color: green;
+            background-image: url(./icon_on.svg);
+         
+        }
+        
+    </style>
+
+</head>
+<body>
+    
+    <div class="chk-block">
+        <input type="checkbox" id="chk">
+        <label class="check-label" for="chk"></label>
+        <span>동의</span>
+    </div>
+    
+</body>
+</html>

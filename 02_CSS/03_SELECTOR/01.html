@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 전체 선택자 */
+        *{box-sizing: border-box;}
+        /* 요소 선택자 */
+        div{
+            width: 150px; /* 너비 150 */
+            height: 150px; /* 높이 150 */
+            border: 1px solid; /* 태두리 1 */
+            margin: 10px; /* 겉에 마진 10 */
+        }
+        /* ID 선택자: 유일한 요소 지정 하나만 써야됌 */
+        #id_01{
+            background-color: red;
+        }
+        /* class 선택자: 특정 태그 그룹지정 */
+        .c1{
+            background-color: royalblue;
+        }
+        /* 그룹선택자: , */
+        #id_01,
+        .c1
+        {
+            border-radius:  50px;;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- .c1+#id_01+div+.c1+.c1>p{HELLO WORLD} -->
+    
+    <div class="c1"></div>
+    <div id="id_01"></div>
+    <div></div>
+    <div class="c1"></div>
+    <div class="c1">
+        <p>HELLOWORLD</p>
+    </div>
+
+</body>
+</html>
