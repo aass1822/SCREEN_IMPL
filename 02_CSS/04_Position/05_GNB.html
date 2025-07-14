@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* common */
+        *{box-sizing: border-box;}
+        ul{padding: 0;margin: 0;list-style: none;}
+        a{text-decoration: none;color: black;} /* 밑줄 없애고 글자 색 검정 */
+        body{margin:0;padding: 0;}
+
+        /* main pahe */
+    
+        /* header */
+            .wrapper{}
+            .wrapper>header{}
+            .wrapper>header>.top-header{}
+            .wrapper>header>nav{
+                /* border: 1px solid; */
+                height: 50px;
+            }
+        /* nav's menu */
+        .wrapper>header>nav>ul.main-menu{
+            display: flex;
+            justify-content: space-between; /* 사이사이 간격 균일화 */
+            height: 100%;
+            flex-direction: column;
+            background-color: orange;
+            position: relative;
+        }
+        .wrapper>header>nav>ul.main-menu>li{
+            /* border: 1px solid; */
+            height: 100%;
+            padding: 0 20px;
+            background-color: royalblue;
+            width: 150px;
+
+            /* 중요 포인트! */
+        }
+        .wrapper>header>nav>ul.main-menu>li>a{
+            display: block;
+            height: 100%;
+            line-height: 45px; /* 글자 위치 가로위치로 중간 이동 */
+            color: white;
+        }
+        .wrapper>header>nav>ul.main-menu>li>ul.sub-menu{
+            /* border: 1px solid; */
+
+            /* 중요 포인트! */
+            width: 150px;
+            position: absolute;
+            left: 150px;
+            top: 0;
+
+            display: none;
+        }
+        .wrapper>header>nav>ul.main-menu>li>ul.sub-menu>li{
+            background-color: green;
+            height: 50px;
+            line-height: 45px;
+            padding: 0 20px;
+        }
+        .wrapper>header>nav>ul.main-menu>li>ul.sub-menu>li>a{
+            display: block;
+        }
+        .wrapper>header>nav>ul.main-menu>li:hover>.sub-menu{
+            display: block;
+        }
+
+        /* main */
+            .wrapper>main{}
+            .wrapper>main>section{}
+        /* footer */
+            .wrapper>footer{}
+    </style>
+
+</head>
+<body>
+    <!-- .wrapper>header>.top-header+nav^main>section^footer 기본구조? -->
+    <div class="wrapper">
+        <header>
+            <div class="top-header"></div>
+            <nav>
+                <ul class="main-menu"> <!-- ul.main-menu>li*4>a[href="javascript:void(0)"]{$_MAINMENU}+ul.sud-menu>li*5>a[href="javascript:void(0)"]{$_SUBMENU} -->
+                    <li>
+                        <a href="javascript:void(0)">민원 소통 참여</a>
+                        <ul class="sub-menu">
+                            <li><a href="javascript:void(0)">1_SUBMENU</a></li>
+                            <li><a href="javascript:void(0)">2_SUBMENU</a></li>
+                            <li><a href="javascript:void(0)">3_SUBMENU</a></li>
+                            <li><a href="javascript:void(0)">4_SUBMENU</a></li>
+                            <li><a href="javascript:void(0)">5_SUBMENU</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">정보 공개</a>
+                        <ul class="sub-menu">
+                            <li><a href="javascript:void(0)">11_SUBMENU</a></li>
+                            <li><a href="javascript:void(0)">21_SUBMENU</a></li>
+                            <li><a href="javascript:void(0)">31_SUBMENU</a></li>
+                            <li><a href="javascript:void(0)">41_SUBMENU</a></li>
+                            <li><a href="javascript:void(0)">51_SUBMENU</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">대구 소개</a>
+                        <ul class="sub-menu">
+                            <li><a href="javascript:void(0)">12_SUBMENU</a></li>
+                            <li><a href="javascript:void(0)">22_SUBMENU</a></li>
+                            <li><a href="javascript:void(0)">32_SUBMENU</a></li>
+                            <li><a href="javascript:void(0)">42_SUBMENU</a></li>
+                            <li><a href="javascript:void(0)">52_SUBMENU</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">분야별 정보</a>
+                        <ul class="sub-menu">
+                            <li><a href="javascript:void(0)">13_SUBMENU</a></li>
+                            <li><a href="javascript:void(0)">23_SUBMENU</a></li>
+                            <li><a href="javascript:void(0)">33_SUBMENU</a></li>
+                            <li><a href="javascript:void(0)">43_SUBMENU</a></li>
+                            <li><a href="javascript:void(0)">53_SUBMENU</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
+        </header>
+        <main>
+            <section></section>
+        </main>
+        <footer></footer>
+    </div>
+
+</body>
+</html>

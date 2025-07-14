@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{box-sizing: border-box;}
+        ul{padding: 0;margin:0;list-style: none;}
+        a{text-decoration: none;color: black;} /* 밑줄 없애고 글자 색 검정 */
+        body{margin:0;padding: 0;}
+
+        .wrapper{}
+        .wrapper>header{}
+        .wrapper>header>.top-header{}
+        
+        .wrapper>header>nav{
+            /* border: 1px solid; */
+            height: 50px;
+            width: 380px;
+            border-bottom: 1px solid gray;
+        }
+        .wrapper>header>nav>ul.main-menu{
+            height: 100%;
+            /* width: 100%; */
+            display: flex;
+            justify-content: space-between
+            /* align-items: center; */
+            /* gap: 20px; */
+        }
+        .wrapper>header>nav>ul.main-menu>li.main-menu1{
+            height: 100%;
+            padding: 0 15px;
+            left: 20px;
+            /* background-color: royalblue; */
+            position: relative;
+        }
+        .wrapper>header>nav>ul.main-menu>li.main-menu2{
+            height: 100%;
+            padding: 0 15px;
+            /* background-color: royalblue; */
+            position: relative;
+        }
+        .wrapper>header>nav>ul.main-menu>li>.a1{
+            display: block;
+            height: 100%;
+            width: 60px;
+            text-align: center;
+            /* align-content: center; */
+            line-height: 45px;
+            color: black;
+        }
+        .wrapper>header>nav>ul.main-menu>li>.a2{
+            display: block;
+            height: 100%;
+            /* text-align: center; */
+            /* align-content: center; */
+            line-height: 45px;
+            color: black;
+        }
+        .wrapper>header>nav>ul.main-menu>li.main-menu1>ul.sub-menu1{
+            position: absolute;
+            border: 1px solid;
+            left: 0;
+            top: 49px;
+            width: 100%;
+            display: none;
+            text-align: center;
+            border-bottom: 1px solid lightgray;
+            border-right: 1px solid lightgray;
+            border-left: 1px solid lightgray;
+            
+        }
+        .wrapper>header>nav>ul.main-menu>li.main-menu2>ul.sub-menu2{
+            left: 0;
+            top: 49px;
+            width: 100%;
+            border: 1px solid;
+            position: absolute;
+            display: none;
+            text-align: center;
+            border-bottom: 1px solid lightgray;
+            border-right: 1px solid lightgray;
+            border-left: 1px solid lightgray;
+        }
+        .wrapper>header>nav>ul.main-menu>li.main-menu1:hover>.sub-menu1{
+            display: block;
+        }
+        .wrapper>header>nav>ul.main-menu>li.main-menu2:hover>.sub-menu2{
+            display: block;
+        }
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header>
+            <div class="top-header"></div>
+            <nav>
+                <ul class="main-menu">
+                    <li class="main-menu1">
+                        <a class="a1" href="javascript:void(0)">BEST</a>
+                        <ul class="sub-menu1">
+                            <li><a href="javascript:void(0)">패키지</a></li>
+                            <li><a href="javascript:void(0)">신발</a></li>
+                            <li><a href="javascript:void(0)">상의</a></li>
+                            <li><a href="javascript:void(0)">하의</a></li>
+                            <li><a href="javascript:void(0)">모자</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu2">
+                        <a class="a2" href="javascript:void(0)">충무공 이순신 시리즈</a>
+                        <ul class="sub-menu2">
+                            <li><a href="javascript:void(0)">패키지</a></li>
+                            <li><a href="javascript:void(0)">신발</a></li>
+                            <li><a href="javascript:void(0)">상의</a></li>
+                            <li><a href="javascript:void(0)">하의</a></li>
+                            <li><a href="javascript:void(0)">모자</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+
+            </section>
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+
+</body>
+
+</html>
