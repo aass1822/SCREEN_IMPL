@@ -1,150 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>상단메뉴 스크롤 애니메이션</title>
 
-    <style>
-        *{
-            text-decoration: none; margin: 0; padding:0; 
-        }
+<style>
+  /* 기본 초기화 */
+  * {
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+  }
 
-        .wrapper {}
+  body {
+    background: #f9f9f9;
+  }
 
-        .wrapper>header {}
+  /* 상단 메뉴 바 */
+  nav {
+    background: #004b89;
+  }
 
-        .wrapper>header>.top-header {}
+  ul.main-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    height: 60px;
+  }
 
-        .wrapper>header>nav {
-      
-       
-        }
+  ul.main-menu > li {
+    position: relative;
+  }
 
-        /* nav's menu */
-        .wrapper>header>nav>ul.main-menu {
-        display: flex;
-        justify-content: center;
-        gap: 100px;
-        
-        }
+  ul.main-menu > li > a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 0 30px;
+    line-height: 60px;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: background 0.3s;
+  }
 
-        .wrapper>header>nav>ul.main-menu>li {
-          
-        }
+  ul.main-menu > li:hover > a {
+    background: #003366;
+  }
 
-        .wrapper>header>nav>ul.main-menu>li>a {
-      
-        }
+  /* 서브메뉴 기본 스타일 */
+  ul.sub-menu {
+    list-style: none;
+    position: absolute;
+    top: 60px;  /* 메인 메뉴 높이만큼 아래 */
+    left: 0;
+    width: 220px; /* 넓이 고정 */
+    max-height: 0; /* 기본에선 안보이게 */
+    overflow-y: hidden; /* 최대 높이 넘으면 숨김 */
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 0 0 5px 5px;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 0; /* 보이지 않을 때는 패딩도 제거 */
+    z-index: 100;
+  }
 
-        .wrapper>header>nav>ul.main-menu>li>ul.sub-menu {
-       
-        }
+  /* 서브메뉴가 열릴 때 */
+  ul.main-menu > li:hover > ul.sub-menu {
+    max-height: 260px; /* 5개 * 52px (li 높이 + padding) 정도 */
+    padding: 10px 0; /* 위아래 여백 줌 */
+    overflow-y: auto; /* 넘치면 스크롤 */
+  }
 
-        .wrapper>header>nav>ul.main-menu>li>ul.sub-menu>li {
-        
-        }
+  ul.sub-menu > li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+  }
 
-        .wrapper>header>nav>ul.main-menu>li>ul.sub-menu>li>a {
-   
-        }
+  ul.sub-menu > li:last-child {
+    border-bottom: none;
+  }
 
-        .wrapper>header>nav>ul.main-menu>li:hover>.sub-menu {
-   
-        }
+  ul.sub-menu > li > a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
 
-        /* main */
-        .wrapper>main {}
+  ul.sub-menu > li:hover {
+    background: #f0f0f0;
+  }
 
-        .wrapper>main>section {}
+  /* 스크롤바 커스텀 (크롬, 엣지) */
+  ul.sub-menu::-webkit-scrollbar {
+    width: 6px;
+  }
 
-        /* footer */
-        .wrapper>footer {}
-    </style>
-
+  ul.sub-menu::-webkit-scrollbar-thumb {
+    background-color: #004b89;
+    border-radius: 3px;
+  }
+</style>
 </head>
 
 <body>
 
-    <div class="wrapper">
-        <header>
-            <div class="top-header"></div>
-            <nav>
-                <ul class="main-menu">
-                    <li>
-                        <a href="javascript:void(0)">민원·소통·참여</a>
-                        <ul class="sud-menu">
-                            <li><a href="javascript:void(0)">민원실 안내</a></li>
-                            <li><a href="javascript:void(0)">두드리소(민원친성)</a></li>
-                            <li><a href="javascript:void(0)">시장에게 바란다</a></li>
-                            <li><a href="javascript:void(0)">120달구벌콜센터</a></li>
-                            <li><a href="javascript:void(0)">사이버추모관</a></li>
-                            <li><a href="javascript:void(0)">안전신문고</a></li>
-                            <li><a href="javascript:void(0)">공익제보</a></li>
-                            <li><a href="javascript:void(0)">공공재정 부정청구 신고</a></li>
-                            <li><a href="javascript:void(0)">공직비리 익명신고</a></li>
-                            <li><a href="javascript:void(0)">복지 및 인권옴부즈만</a></li>
-                            <li><a href="javascript:void(0)">행정서비스 헌장</a></li>
-                            <li><a href="javascript:void(0)">대구시민헌장</a></li>
-                            <li><a href="javascript:void(0)">행복민원배심원제</a></li>
-                            <li><a href="javascript:void(0)">시민 참여</a></li>
-                            <li><a href="javascript:void(0)">지방분권</a></li>
-                            <li><a href="javascript:void(0)">정책토론</a></li>
-                            <li><a href="javascript:void(0)">제안/설문/투표</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">정보 공개</a>
-                        <ul class="sud-menu">
-                            <li><a href="javascript:void(0)">행정정보공개</a></li>
-                            <li><a href="javascript:void(0)">정책실명제</a></li>
-                            <li><a href="javascript:void(0)">알림정보</a></li>
-                            <li><a href="javascript:void(0)">통합자료실</a></li>
-                            <li><a href="javascript:void(0)">공공저작물</a></li>
-                            <li><a href="javascript:void(0)">공공데이터개방</a></li>
-                            <li><a href="javascript:void(0)">계약정보</a></li>
-                            <li><a href="javascript:void(0)">감사정보</a></li>
-                            <li><a href="javascript:void(0)">통계정보</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">대구소개</a>
-                        <ul class="sud-menu">
-                            <li><a href="javascript:void(0)">시정비전</a></li>
-                            <li><a href="javascript:void(0)">시청안내</a></li>
-                            <li><a href="javascript:void(0)">일반현황</a></li>
-                            <li><a href="javascript:void(0)">대구의 상징물(지정)</a></li>
-                            <li><a href="javascript:void(0)">대구의 상징</a></li>
-                            <li><a href="javascript:void(0)">스토리인대구</a></li>
-                            <li><a href="javascript:void(0)">역사</a></li>
-                            <li><a href="javascript:void(0)">대구광역시뉴스룸</a></li>
-                            <li><a href="javascript:void(0)">교류도시</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">분야별정보</a>
-                        <ul class="sud-menu">
-                            <li><a href="javascript:void(0)">문화·관광·체육</a></li>
-                            <li><a href="javascript:void(0)">교통</a></li>
-                            <li><a href="javascript:void(0)">복지</a></li>
-                            <li><a href="javascript:void(0)">여성·가족·교육</a></li>
-                            <li><a href="javascript:void(0)">건강·보건·위생</a></li>
-                            <li><a href="javascript:void(0)">산업·경제</a></li>
-                            <li><a href="javascript:void(0)">환경</a></li>
-                            <li><a href="javascript:void(0)">소방·안전</a></li>
-                            <li><a href="javascript:void(0)">도시주택·건설</a></li>
-                            <li><a href="javascript:void(0)">행정  ·재정·세정</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section></section>
-        </main>
-        <footer></footer>
-    </div>
+<nav>
+  <ul class="main-menu">
+    <li>
+      <a href="#">메뉴 1</a>
+      <ul class="sub-menu">
+        <li><a href="#">서브 1-1</a></li>
+        <li><a href="#">서브 1-2</a></li>
+        <li><a href="#">서브 1-3</a></li>
+        <li><a href="#">서브 1-4</a></li>
+        <li><a href="#">서브 1-5</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">메뉴 2</a>
+      <ul class="sub-menu">
+        <li><a href="#">서브 2-1</a></li>
+        <li><a href="#">서브 2-2</a></li>
+        <li><a href="#">서브 2-3</a></li>
+        <li><a href="#">서브 2-4</a></li>
+        <li><a href="#">서브 2-5</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">메뉴 3</a>
+      <ul class="sub-menu">
+        <li><a href="#">서브 3-1</a></li>
+        <li><a href="#">서브 3-2</a></li>
+        <li><a href="#">서브 3-3</a></li>
+        <li><a href="#">서브 3-4</a></li>
+        <li><a href="#">서브 3-5</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">메뉴 4</a>
+      <ul class="sub-menu">
+        <li><a href="#">서브 4-1</a></li>
+        <li><a href="#">서브 4-2</a></li>
+        <li><a href="#">서브 4-3</a></li>
+        <li><a href="#">서브 4-4</a></li>
+        <li><a href="#">서브 4-5</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 </body>
 
