@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            width: 400px;
+            height: 40px;
+            background-color: orange;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid black;
+        }
+        div:nth-child(1){
+            animation-name:moving1; /* 키프레임 뒤에 이름 */
+            animation-duration: 5s; /* 움직이는 시간 */ 
+            animation-iteration-count: infinite; /* 횟수 */
+            animation-direction: alternate; /* 순환 */
+        }
+        div:nth-child(2){
+            animation-name:moving2; /* 키프레임 뒤에 이름 */
+            animation-duration: 2.5s; /* 움직이는 시간 */ 
+            animation-iteration-count: infinite; /* 횟수 */
+            animation-direction: alternate; /* 순환 */
+        }
+
+        @keyframes moving1{
+            from{margin-left: 100%;}
+            to{margin-left: 0%;}
+        }
+        @keyframes moving2{
+            from{margin-top: 100%;}
+            to{margin-top: 0%;}
+        }
+    </style>
+
+</head>
+<body>
+    <div>HELLOWORLD</div>
+    <div>HELLOWORLD</div>
+</body>
+</html>
