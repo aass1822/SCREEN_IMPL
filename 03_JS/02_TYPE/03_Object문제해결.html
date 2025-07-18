@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>점수 입력 예제</title>
+</head>
+
+<body>
+
+  <!-- 국어 점수 입력 칸 -->
+  <div>
+    <label>국어점수 : </label>
+    <input id="korea" type="text" /> <!-- 국어 점수 입력 -->
+    <button id="국어save">저장</button> <!-- 저장 버튼 -->
+  </div>
+
+  <!-- 영어 점수 입력 칸 -->
+  <div>
+    <label>영어점수 : </label>
+    <input id="english" type="text" />
+    <button id="영어save">저장</button>
+  </div>
+
+  <!-- 수학 점수 입력 칸 -->
+  <div>
+    <label>수학점수 : </label>
+    <input id="math" type="text" />
+    <button id="수학save">저장</button>
+  </div>
+
+  <hr />
+
+  <!-- 총합 출력 영역 -->
+  총합 : <div class="sum-block"></div>
+  <button id="sumBtn">총합 확인</button><br />
+
+  <!-- 평균 출력 영역 -->
+  평균 : <div class="avg-block"></div>
+  <button id="avgBtn">평균 확인</button><br />
+
+  <script>
+    // 점수를 저장할 객체 선언
+    const myScore = {
+      국어: 0, // 국어 점수
+      영어: 0, // 영어 점수
+      수학: 0, // 수학 점수
+      총점: 0, // 총합
+      평균: 0, // 평균
+
+      // 국어 점수 저장 함수
+      save국어: function () {
+        const input = document.getElementById("korea"); // 입력 요소 찾기
+        this.국어 = Number(input.value); // 숫자로 변환해서 저장
+        console.log("국어 저장됨:", this.국어);
+      },
+
+      // 영어 점수 저장 함수
+      save영어: function () {
+        const input = document.getElementById("english");
+        this.영어 = Number(input.value);
+        console.log("영어 저장됨:", this.영어);
+      },
+
+      // 수학 점수 저장 함수
+      save수학: function () {
+        const input = document.getElementById("math");
+        this.수학 = Number(input.value);
+        console.log("수학 저장됨:", this.수학);
+      },
+
+      // 총합 계산 함수
+      sum: function () {
+        this.총점 = this.국어 + this.영어 + this.수학; // 총합 계산
+        const sumBlock = document.querySelector(".sum-block"); // 결과 보여줄 곳 찾기
+        sumBlock.innerHTML = this.총점; // 결과 넣기
+      },
+
+      // 평균 계산 함수
+      avg: function () {
+        this.평균 = this.총점 / 3; // 평균 계산
+        const avgBlock = document.querySelector(".avg-block"); // 결과 보여줄 곳 찾기
+        avgBlock.innerHTML = this.평균.toFixed(2); // 소수점 둘째 자리까지 보여주기
+      }
+    };
+
+    // 국어 저장 버튼 클릭 시 실행
+    document.getElementById("국어save").addEventListener("click", function () {
+      myScore.save국어(); // 국어 저장 함수 호출
+    });
+
+    // 영어 저장 버튼 클릭 시 실행
+    document.getElementById("영어save").addEventListener("click", function () {
+      myScore.save영어(); // 영어 저장 함수 호출
+    });
+
+    // 수학 저장 버튼 클릭 시 실행
+    document.getElementById("수학save").addEventListener("click", function () {
+      myScore.save수학(); // 수학 저장 함수 호출
+    });
+
+    // 총합 확인 버튼 클릭 시 실행
+    document.getElementById("sumBtn").addEventListener("click", function () {
+      myScore.sum(); // 총합 계산 및 출력
+    });
+
+    // 평균 확인 버튼 클릭 시 실행
+    document.getElementById("avgBtn").addEventListener("click", function () {
+      myScore.avg(); // 평균 계산 및 출력
+    });
+  </script>
+
+</body>
+
+</html>
