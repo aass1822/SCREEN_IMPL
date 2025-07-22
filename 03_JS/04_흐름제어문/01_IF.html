@@ -4,8 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0; padding: 0;
+            background-color: beige;
+        }
+        .layout{
+            width: 1280px;
+            height: 100vh;
+            margin: 0 auto;
+            background-color: white;
+        }
+        .layout-mobile{
+            width: 350px;
+            height: 100vh;
+            margin: 0 auto;
+            background-color: white;
+        }
+        .mode{
+            position: fixed;
+            left: 5px;
+            top: 5px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div>
+        <select name="" id="" class="mode">
+            <option value="desktop">데스크탑</option>
+            <option value="mobile">모바일</option>
+        </select>
+    </div>
+    <div class="wrapper layout">
+
+    </div>
+
+    <script>
+        // if(조건식){
+        //  참인경우 실행할 종속 문장
+        //}
+
+        // eles{
+        //  거짓인경우 실행할 종속 문장
+        //}
+        const wrapperE1 = document.querySelector('.wrapper');
+        const modeE1 = document.querySelector('.mode');
+        modeE1.addEventListener('change',function(){
+            console.log('changed...');
+            const selectedValue = modeE1.options[modeE1.selectedIndex].value;
+            console.log(selectedValue);
+            // 만약 selectedValue--desktop 인경우
+            // 만약 selectedValue--mobile 인경우
+
+            if(selectedValue=='desktop'){
+                //데스크탑
+                wrapperE1.classList.remove('layout-mobile')
+                wrapperE1.classList.add('layout');
+            }else{
+                //모바일   태그에 포함되있는 모든 클래스 집합
+                wrapperE1.classList.remove('layout');
+                wrapperE1.classList.add('layout-mobile');
+            }
+
+        });
+    </script>
+
 </body>
 </html>
