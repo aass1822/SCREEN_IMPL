@@ -1,0 +1,42 @@
+# 자바스크립트
+자바스크립트(JavaScript)는 웹 페이지에 동적인 기능을 추가할 수 있도록 설계된 인터프리터 방식의 프로그래밍 언어  
+> 데이터 기반의 자료를 저장 처리  
+서버 - 제공 클라이언트 -요청 (웹 서비스):프로그램  
+다양한 이벤트를 처리해주는 브라우저에 있는 대부분의 기능을 쓸 수 있게함  
+
+> 인터프리터 언어 : 실행전에 컴파일이 필요없는 언어
+동적 타이핑 : 변수의 타입이 실행중에 결정됨
+객체 기반 : 거의 모든 것이 객체로 구성됨
+이벤트 기반 : 사용자 상호작용에 따라 코드실행
+브라우저 내장 : 별도 설치 없이 웹 브라우저에서 바로 실행가능  
+크로스 플랫폼 : 운영체제에 상관없이 대부분의 환경에서 실행 가능     
+
+#실습
+> onClick : 클릭했을 때 이벤트 발생 ="alert('Hello')" 뒤에 붙히면 팝업에 띄울 무언가
+\n 은 줄바꿈
+a태그로 클릭이벤트 처리  
+<a href="javascript:alert('HELLOWORLD')">BTN1</a>
+document.write 문서내에 작성
+document.getElementById 요소중 ID를 찾아 innerHTML='ABCD'  글자를 바꾼다.
+`중요 문자열로 취급
+null 빈값 빈공간 생성
+indefined 빈공간 미생성
+const btnE1 = document.querySelector('.btn');
+addevetlistener : 콜백함수 ()=>{}
+btnE1.addeventlistener('이벤트종류','수행로직');
+if(state){
+}else{
+} 많이 써본 if문
+**대소문자 중요**
+( ) : Functor라고 함 안에 값을 넣으면 꺼내와서 처리
+백틱 문자열안에 $ㅔ{}이렇게 바로 변수를 불러와 넣을 수 있음
+const poppi =
+        {
+            name: "뽀삐",
+            kind: "믹스견",
+            age: 1,
+            weight: 8.4
+        } 설명
+sound: function () { // 처리 로직
+                alert(this.name + " 이(가) 짖습니다-!"); this 라는 예약어를 통해 생성된 객체의 속성을 불러 올 수 있다.
+            }

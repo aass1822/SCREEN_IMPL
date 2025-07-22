@@ -1,0 +1,39 @@
+#2025/07/17
+
+지라 가입 슬랙 설치
+
+##TRANSITION
+> 마우스 효과에 지연효과 부연
+ex: transition: 1s;
+그라데이션 주는법
+background :linear-gradient(to left , red,orange,yellow,green);
+전체 그라데이션 줄려면 상태변화 이전에 설정 해줘야함
+ex: p>span{
+transition:1s;
+background :linear-gradient(to left , red,orange,yellow,green);
+}
+p>input[type="text"]:focus+span{
+background :linear-gradient(to right , red,orange,yellow,green);
+}
+transform: translate(400px,400px) 위치 이동(translate) / X,Y를 뒤에 붙혀서 따로 가능  
+transform: scale(2.5); 크기 조정(scale)
+transform: rotate(45deg); 회전,각도 조정(rotate(숫자deg))
+transform: skew(45deg); 기울이기(skew)
+동시적용
+transform: translate(500px,500px) rotate(360deg) scale(2.5);
+가로 새로 이동 회전 크기
+3D효과
+transform: perspective(10px) ;
+perspective : 관점 내가 보는위치 기준 가까이 있을수록 px이 작아지고 커짐 원근법
+transform-style:preserve-3d; 자식요소들에게 3d효과를 전파
+backface-visibility: hidden; 회전 시 뒷면은 표시안함 중요 
+내용을 알려주거나 움직임을 요청할 때 @씀
+from{} 시작 to{} 종료
+
+## Media Query
+> 브라우저의 화면 크기,해상도,기기 종류등에 따라
+
+
+
+
+  

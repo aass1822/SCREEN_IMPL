@@ -1,0 +1,90 @@
+# 2025/07/11
+> Vscode 다운하고 마켓에서 korean Lang 다운
+LIve server 다운
+auto rename 다운
+---
+# FONT
+> 구글폰트 검색해서 골라서 폰트 다운할 수 있음
+Embed code 클릭 후 link에서 html, css 코드 복붙
+네이버 글꼴, 프리탠다드 글꼴
+스타일 태그안에 바디{여기안에 font-family: ' '} 
+' '안에 폰트명 넣으면 기본글꼴로 지정
+---
+# Margin
+> all direction 동일 설정
+margin: 20px;
+top,bottom:20px left,right:40px;
+top:10px,right:20px,bottom:30px,left:20px
+margin:10px 20px 30px;
+top:10px,right:20px,bottom:30px,left:20px
+margin:10px 20px 30px 40px
+아들을 부모 블록 정 중간에 맞추기
+# 가운데 맞추기
+.p1{
+            position:relative;
+        }   
+        
+        .s1{
+            position:absolute;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            margin: auto;
+        }
+다른 하나가 들어와도 중간위치는 고정
+.p2{
+            display: flex;
+            justify-content: center; /* 수직 ㅣ */
+            align-items: center; /* 수평 ㅡ */
+        }
+다른 하나가 들어오면 둘다 중간으로 배치
+# SELECTOR
+> HTML 요소를 선택하여 스타일을 지정할 수 있게 해주는 문법
+content-box : content를 기준으로 잡고 크기 커질수있음
+border-box : 태두리 기준으로 잡기떄문에 크기 고수
+.wrapper>header>.top-header+nav^main>section^footer 구조로 틀 만들기  
+svg 백터기반 가로높이가 변경되더라도 해상도 깨지지않음
+hover 중요  
+---
+# 작업할때 표
+> 공통영역 common
+        *{}
+        body{}
+        ul{}
+        a{}
+
+        /* layout */
+        .wrapper{}
+        /* layout-header */
+        .wrapper>header{}
+        .wrapper>header>.top-header{}
+        .wrapper>header>.nav{}
+
+        /* layout-main */
+        .wrapper>.main{}
+        .wrapper>.main>section{}
+
+        /* layout-footer */
+        .wrapper>.footer{}
+
+# 하루 정리
+> 선택자  
+*: 전체 선택자  
+div,span : 요소선택자  
+.class1 : 클래스 선택자  
+#id1 : id선택자  
+,: 그룹선택자  
+
+> > : 자식 선택자  
+: 자손 선택자  
+
+> ~ : 동위 선택자(아래 n)  
++ : 동위 선택자(아래 1) -> 체크박스   
+
+> :hover : 의사선택자(마우스오버)    
+
+> ::before : 가상선택자  
+::after : 가상선택자 -메뉴 구분선만들기(다음시간)  
+
+> nth-child : n번째 자식요소  

@@ -1,0 +1,8 @@
+# 2025/07/15
+> Layout width 1280px, margin 0 360px padding 0 360px
+Sticky 부모에 한정되어 움직이는
+Zindex : 어떤 녀석을 앞으로 보여질건지 우선순위값
+# LAYOUT
+> 한행 FLEX 행열 GRID
+space-evenly : 모든애들 사이 간격
+space-around : 첫째 마지막(쪼금 띄움) 빼고 사이 균등
