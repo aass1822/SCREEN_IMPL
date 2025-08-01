@@ -1,0 +1,24 @@
+# 2025/07/25
+
+> 마우스 이벤트    
+키보드 이벤트   
+체크 이벤트 중요  
+DOMContentLoaded     : 최초 document 로드시 1회 동작(HTML이 전부 파싱된 이후 DOM객체가 완성되고 나서
+CSS,외부파일 로드여부와는 관계없다)  
+item노드 생성  
+div.item  
+  div.left  
+    input  
+  div.right  
+    a  
+      span   
+기본구조
+---
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}

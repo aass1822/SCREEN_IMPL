@@ -1,0 +1,77 @@
+# 2025/07/28
+
+> 스크립트에서 regex로 정규표현식  
+
+---
+동기 (Synchronous) : 결과물을 만들어 내기 위해 사전에 정의한 약속  
+---
+코드가 위에서 아래로 순차적으로 실행  
+이전 작업이 끝나야 다음 작업이 실행  
+실행 흐름이 직관적이지만 처리시간이 오래걸리는 작업이 있으면 전체 프로그램이 지연 될 수 있음  
+
+---
+비동기(ASynchronous)
+---
+특정 작업이 끝날 때까지 기다리지 않고 다음 코드가 먼저 실행됌  
+시간이 오래 걸리는 작업(예: 네트워크 요청, 파일 읽기 등)을 수행할 때 유용함  
+콜백(callback), 프로미스(Promise), asyne/await 등을 이용해 처리함   
+Promise : 내장형 비동기 표준 내장 객체
+순서 정하기
+await 가 들어간 function의 앞엔 async가 붙어야한다.
+
+Promise 비동기 처리 객체 확인해보기
+        new Promise((resolve, reject) => {
+
+            setTimeout(() => {
+                const success = true;
+                if (success) {
+                    resolve('요청 성공 : 서버로부터 데이터 수신완료!');
+                } else {
+                    reject('요청 실패 : 서버 오류(500)');
+                }
+            }, 3000)
+        })
+            .then((response) => {console.log(response)}) // 정상처리시 후속 처리
+            .catch((error) => {console.log(error)}) // 오류발생시 후속 처리
+
+메인스레드 생성(왼쪽 블럭 반복처리)
+        let cnt = 0;
+        setInterval(() => {
+            mainThreadEl.innerHTML += `MAIN THREAD...${++cnt}<br/>`;
+        }, 1000)
+
+        // 비동기 기본 함수
+        function sub_process_executor(val) {
+            return new Promise((resolve, reject) => {
+
+                setTimeout(() => {
+                    resolve(val);
+                }, 3000)
+            });
+        }
+
+// Async / Await 사용없이 비동기 처리 진행
+        // sub_process_executor(1)
+        // .then((response)=>{console.log('sub1..',response);sub1ThreadEl.innerHTML=`sub1...${response}`})
+        // .catch((error)=>{})
+
+        // sub_process_executor(2)
+        // .then((response)=>{console.log('sub2..',response);sub2ThreadEl.innerHTML=`sub2...${response}`})
+        // .catch((error)=>{})
+
+        // Async / Await 를 이용한 비동기 처리 순서배치
+async function sub_process_order() {
+            await sub_process_executor(2)
+                .then((response) => { console.log('sub2..', response); sub2ThreadEl.innerHTML = `sub2...${response}` })
+                .catch((error) => { })
+
+            await sub_process_executor(1)
+                .then((response) => { console.log('sub1..', response); sub1ThreadEl.innerHTML = `sub1...${response}` })
+                .catch((error) => { })
+        }
+        sub_process_order();
+
+## 자바 라이브러리
+> 스와이퍼
+스크립트 코드 -
+const swiperBanner = new Swiper('선택자',{옵션들})
