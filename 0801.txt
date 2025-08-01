@@ -1,1 +1,24 @@
 # 2025/08/01
+
+> ex사이트 네이버 클라우드 들어가서 6.2버전 다운로드
+
+3Layer 프로토콜
+
+IP, ICMP,
+ 
+ARP
+
+LAN구간 통신 - 이더넷프로토콜 - MAC
+ARP(Address Resolution Protocol)
+LAN구간 통신 : 컴퓨터에 등록된  IP -> MAC확인 -> 통신
+
+MAC 주소 48bit 구성
+16진수 표시(0-9,A,B,C,D,E,F)
+0000.0000.0000 반틈은 제조사ID 나머지 장치ID
+FFFF.FFFF.FFFF
+
+
+
+
+
+
